@@ -1,0 +1,22 @@
+.page-header__wrap {
+  display: flex;
+  justify-content: space-between;
+
+  width: 880px;
+  margin: 0 auto;
+  padding: 254px 0 239px;
+}
+
+@media (max-width: $tablet-width) {
+  .page-header__wrap {
+    flex-direction: column;
+    width: auto;
+    padding: 134px 50px 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-header__wrap {
+    padding: 120px 16px 0;
+  }
+}
