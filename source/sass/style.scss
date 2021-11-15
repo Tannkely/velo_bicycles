@@ -2,13 +2,15 @@
 @import "fonts.scss";
 @import "variables.scss";
 @import "scaffolding.scss";
+@import "blocks/visually-hidden";
 @import "blocks/page-header";
 @import "blocks/main-nav";
 @import "blocks/page-header__wrap";
+@import "blocks/page-main";
 @import "blocks/intro";
 @import "blocks/form";
 @import "blocks/advantages.scss";
 @import "blocks/models";
 @import "blocks/video";
+@import "blocks/map";
 @import "blocks/page-footer";
-@import "blocks/visually-hidden";

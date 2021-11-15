@@ -33,6 +33,10 @@
       background-image: url("../img/bike-tablet@2x.jpg");
     }
   }
+  
+  .page-header__wrap--no-js {
+    background-color: #3a3a3a;
+  }
 }
 
 @media (max-width: $mobile-width) {

@@ -51,6 +51,10 @@
 
   border: none;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 @media (max-width: $tablet-width) {

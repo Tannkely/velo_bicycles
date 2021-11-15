@@ -4,23 +4,27 @@
 
 .page-footer__contacts {
   display: flex;
-  width: 880px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 564px;
   margin: 0 auto;
-  padding: 0 158px;
+  padding-right: 18px;
 }
 
 .page-footer__link {
   display: flex;
   align-items: center;
-  margin-right: 95px;
 
   font-size: 16px;
   line-height: 32px;
 
   color: rgba(0, 0, 0, 0.5);
 
-  &:last-child {
-    margin-right: 0;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+
+    opacity: 0.7;
   }
 }
 
@@ -30,13 +34,12 @@
 
 @media (max-width: $tablet-width) {
   .page-footer {
-    padding: 20px 35px 50px;
+    padding: 21px 35px 52px;
   }
 
   .page-footer__contacts {
-    justify-content: space-between;
-    width: auto;
-    padding: 0 70px;
+    width: 558px;
+    padding-right: 11px;
   }
 
   .page-footer__link {
@@ -62,5 +65,8 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+  .page-footer__link--indent {
+    padding-right: 17px;
   }
 }

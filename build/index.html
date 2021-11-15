@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Магазин велосипедов MOON</title>
-  <link rel="preload" href="/fonts/opensans.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -37,8 +37,8 @@
   </div>
   <header class="page-header">
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"></button>
-      <ul class="main-nav__list">
+      <button class="main-nav__toggle main-nav__toggle--no-js" type="button"></button>
+      <ul class="main-nav__list main-nav__list--no-js">
         <li class="main-nav__item">
           <a class="main-nav__link" href="advantages">О нас</a>
         </li>
@@ -54,7 +54,7 @@
       </ul>
     </nav>
 
-    <section class="page-header__wrap">
+    <section class="page-header__wrap page-header__wrap--no-js">
       <div class="intro">
         <a class="intro__link">
           <img src="img/logo.svg" width="68" height="21" alt="Логотип сайта">
@@ -103,7 +103,7 @@
               <img class="models__img" src="img/road-bicycle-mobile@1x.jpg" srcset="img/road-bicycle-mobile@2x.jpg" alt="Дорожный велосипед">
             </picture>
           </a>
-          <h4 class="models__item-title">Дорожный велосипед</h4>
+          <h3 class="models__item-title">Дорожный велосипед</h3>
         </li>
         <li class="models__item models__item--indent">
           <a class="models__link models__link--mountain" href="#">
@@ -115,7 +115,7 @@
               <img class="models__img" src="img/mountain-bike-mobile@1x.jpg" srcset="img/mountain-bike-mobile@2x.jpg" alt="Горный велосипед">
             </picture>
           </a>
-          <h4 class="models__item-title">Горный велосипед</h4>
+          <h3 class="models__item-title">Горный велосипед</h3>
         </li>
         <li class="models__item">
           <a class="models__link models__link--child" href="#">
@@ -127,7 +127,7 @@
               <img class="models__img" src="img/child-bicycle-mobile@1x.jpg" srcset="img/child-bicycle-mobile@2x.jpg" alt="Детский велосипед">
             </picture>
           </a>
-          <h4 class="models__item-title">Детский велосипед</h4>
+          <h3 class="models__item-title">Детский велосипед</h3>
         </li>
       </ul>
     </section>
@@ -152,20 +152,22 @@
     </section>
   </main>
 
-  <footer class="page-footer" id="contacts">
-    <div class="page-footer__contacts">
+  <footer class="page-footer">
+    <div class="page-footer__contacts" id="contacts">
       <a class="page-footer__link" href="mailto:puteshestviemechta@gmail.ru">
         <svg class="page-footer__icon" width="26" height="20" fill="none">
           <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
         </svg>
         puteshestviemechta@gmail.ru</a>
       <a class="page-footer__link" href="tel:+749978468446">
-        <svg class="page-footer__icon" width="17" height="24" fill="none">
-          <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
-        </svg>
-        +7 (499) -784-684-46</a>
-    </div>
+        <a class="page-footer__link page-footer__link--indent" href="tel:+749978468446">
+          <svg class="page-footer__icon" width="17" height="24" fill="none">
+            <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+          </svg>
+          +7 (499) -784-684-46</a>
+    </a></div>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
