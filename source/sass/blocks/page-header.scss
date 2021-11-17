@@ -18,7 +18,8 @@
 
     z-index: -1;
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
       background-image: url("../img/bike-desktop@2x.jpg");
     }
   }
@@ -29,11 +30,12 @@
     height: 340px;
     background-image: url("../img/bike-tablet@1x.jpg");
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
       background-image: url("../img/bike-tablet@2x.jpg");
     }
   }
-  
+
   .page-header__wrap--no-js {
     background-color: #3a3a3a;
   }
@@ -44,7 +46,8 @@
     height: 390px;
     background-image: url("../img/bike-mobile@1x.jpg");
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
       background-image: url("../img/bike-mobile@2x.jpg");
     }
   }

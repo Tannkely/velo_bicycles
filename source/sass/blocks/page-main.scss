@@ -1,15 +1,12 @@
 .page-main {
   min-height: calc(100vh - 159px);
-}
 
-@media (max-width: $tablet-width) {
-  .page-main {
+
+  @media (max-width: $tablet-width) {
     min-height: calc(100vh - 97px);
   }
-}
 
-@media (max-width: $mobile-width) {
-  .page-main {
+  @media (max-width: $mobile-width) {
     min-height: calc(100vh - 136px);
   }
 }

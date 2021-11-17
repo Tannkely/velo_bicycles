@@ -12,9 +12,9 @@
 </head>
 
 <body id="main">
-  <!-- <div style="display:none">
+  <use style="display:none">
     <include src="build/img/sprite_auto.svg"></include>
-  </div> -->
+  </use>
 
   <header class="page-header">
     <nav class="main-nav">
@@ -38,7 +38,9 @@
     <section class="page-header__wrap page-header__wrap--no-js">
       <div class="intro">
         <a class="intro__link">
-          <img src="img/logo.svg" width="68" height="21" alt="Логотип сайта">
+          <svg width="68" height="21" fill="#0AD9C6">
+            <use xlink:href="img/sprite_auto.svg#logo"></use>
+          </svg>
         </a>
         <h1 class="intro__title">Мы продаем велосипеды</h1>
         <p class="intro__text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
@@ -77,13 +79,16 @@
         <li class="models__item">
           <a class="models__link models__link--road" href="#">
             <picture>
-              <source type="image/webp" media="(min-width: 1024px)" srcset="img/road-bicycle-desktop@1x.webp 1x, img/road-bicycle-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1024px)"
+                srcset="img/road-bicycle-desktop@1x.webp 1x, img/road-bicycle-desktop@2x.webp 2x">
               <source type="image/webp" srcset="img/road-bicycle-mobile@1x.webp 1x, img/road-bicycle-mobile@2x.webp 2x">
 
               <!-- 1х: 342px; 2x: 684px -->
-              <source media="(min-width: 1024px)" srcset="img/road-bicycle-desktop@1x.jpg 1x, img/road-bicycle-desktop@2x.jpg 2x">
+              <source media="(min-width: 1024px)"
+                srcset="img/road-bicycle-desktop@1x.jpg 1x, img/road-bicycle-desktop@2x.jpg 2x">
               <!-- 1х: 270px; 2x: 540px -->
-              <img class="models__img" src="img/road-bicycle-mobile@1x.jpg" srcset="img/road-bicycle-mobile@2x.jpg" alt="Дорожный велосипед">
+              <img class="models__img" src="img/road-bicycle-mobile@1x.jpg" srcset="img/road-bicycle-mobile@2x.jpg"
+                alt="Дорожный велосипед">
             </picture>
           </a>
           <h3 class="models__item-title">Дорожный велосипед</h3>
@@ -91,13 +96,17 @@
         <li class="models__item models__item--indent">
           <a class="models__link models__link--mountain" href="#">
             <picture>
-              <source type="image/webp" media="(min-width: 1024px)" srcset="img/mountain-bike-desktop@1x.webp 1x, img/mountain-bike-desktop@2x.webp 2x">
-              <source type="image/webp" srcset="img/mountain-bike-mobile@1x.webp 1x, img/mountain-bike-mobile@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1024px)"
+                srcset="img/mountain-bike-desktop@1x.webp 1x, img/mountain-bike-desktop@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/mountain-bike-mobile@1x.webp 1x, img/mountain-bike-mobile@2x.webp 2x">
 
               <!-- 1х: 342px; 2x: 684px -->
-              <source media="(min-width: 1024px)" srcset="img/mountain-bike-desktop@1x.jpg 1x, img/mountain-bike-desktop@2x.jpg 2x">
+              <source media="(min-width: 1024px)"
+                srcset="img/mountain-bike-desktop@1x.jpg 1x, img/mountain-bike-desktop@2x.jpg 2x">
               <!-- 1х: 270px; 2x: 540px -->
-              <img class="models__img" src="img/mountain-bike-mobile@1x.jpg" srcset="img/mountain-bike-mobile@2x.jpg" alt="Горный велосипед">
+              <img class="models__img" src="img/mountain-bike-mobile@1x.jpg" srcset="img/mountain-bike-mobile@2x.jpg"
+                alt="Горный велосипед">
             </picture>
           </a>
           <h3 class="models__item-title">Горный велосипед</h3>
@@ -105,13 +114,17 @@
         <li class="models__item">
           <a class="models__link models__link--child" href="#">
             <picture>
-              <source type="image/webp" media="(min-width: 1024px)" srcset="img/child-bicycle-desktop@1x.webp 1x, img/child-bicycle-desktop@2x.webp 2x">
-              <source type="image/webp" srcset="img/child-bicycle-mobile@1x.webp 1x, img/child-bicycle-mobile@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1024px)"
+                srcset="img/child-bicycle-desktop@1x.webp 1x, img/child-bicycle-desktop@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/child-bicycle-mobile@1x.webp 1x, img/child-bicycle-mobile@2x.webp 2x">
 
               <!-- 1х: 342px; 2x: 684px -->
-              <source media="(min-width: 1024px)" srcset="img/child-bicycle-desktop@1x.jpg 1x, img/child-bicycle-desktop@2x.jpg 2x">
+              <source media="(min-width: 1024px)"
+                srcset="img/child-bicycle-desktop@1x.jpg 1x, img/child-bicycle-desktop@2x.jpg 2x">
               <!-- 1х: 270px; 2x: 540px -->
-              <img class="models__img" src="img/child-bicycle-mobile@1x.jpg" srcset="img/child-bicycle-mobile@2x.jpg" alt="Детский велосипед">
+              <img class="models__img" src="img/child-bicycle-mobile@1x.jpg" srcset="img/child-bicycle-mobile@2x.jpg"
+                alt="Детский велосипед">
             </picture>
           </a>
           <h3 class="models__item-title">Детский велосипед</h3>
@@ -155,9 +168,7 @@
   </footer>
 
   <script src="js/vendor.js"></script>
-  <script>svg4everybody();</script>
   <script src="js/main.js"></script>
-  <script src="js/vendor.js" async=""></script>
 </body>
 
 </html>
