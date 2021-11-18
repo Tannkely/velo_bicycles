@@ -1,13 +1,12 @@
 'use strict';
 
+(function () {
+
 var main = document.querySelector('#main');
 
 if (main) {
   var nav = document.querySelector('.main-nav__list');
   var btnToggle = document.querySelector('.main-nav__toggle');
-  var links = document.querySelectorAll('a[href^="#"]');
-  var inputName = document.querySelector('input[name="name"]');
-  var inputPhone = document.querySelector('input[name="phone"]');
   var pageHeader = document.querySelector('.page-header__wrap');
 
   btnToggle.classList.remove('main-nav__toggle--no-js');
@@ -19,6 +18,11 @@ if (main) {
     nav.classList.toggle('main-nav__list--active');
   });
 
+//Плавный скролл для ссылок
+
+(function () {
+
+  var links = document.querySelectorAll('a[href^="#"]');
 
   for (let link of links) {
     link.addEventListener('click', function (evt) {
@@ -31,7 +35,13 @@ if (main) {
       });
     });
   };
+})();
 
+//Валидация поля имени
+
+(function () {
+
+  var inputName = document.querySelector('input[name="name"]');
 
   var getCorrectName = function () {
     var valueName = inputName.value;
@@ -50,6 +60,14 @@ if (main) {
     getCorrectName();
   });
 
+})();
+
+//Валидация поля ввода номера
+
+(function () {
+
+  var inputPhone = document.querySelector('input[name="phone"]');
+
   var getCorrectPhone = function () {
     var valuePhone = inputPhone.value;
     var re = /^[0-9]*$/;
@@ -61,9 +79,12 @@ if (main) {
         inputPhone.setCustomValidity('');
       }
     }
-  }
+  };
 
   inputPhone.addEventListener('input', function () {
     getCorrectPhone();
   });
-}
+
+})();
+};
+})();
