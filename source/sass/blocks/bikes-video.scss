@@ -1,0 +1,80 @@
+.bikes-video {
+  position: relative;
+  min-height: 706px;
+  background-color: $black-3;
+  color: rgba($basic-white, 0.7);
+
+  @media #{$max-tablet} {
+    min-height: 413px;
+  }
+
+  @media #{$max-mobile} {
+    min-height: 384px;
+  }
+}
+
+.bikes-video__container {
+  @media #{$max-mobile} {
+    @include container-mobile;
+  }
+}
+
+.bikes-video h2 {
+  margin: {
+    top: 0;
+    bottom: 18px;
+  }
+  padding-right: 10px;
+  color: $basic-white;
+
+  @media #{$max-tablet} {
+    margin-bottom: 15px;
+    padding-right: 0;
+  }
+
+  @media #{$max-mobile} {
+    padding-right: 8px;
+  }
+}
+
+.bikes-video p {
+  margin: {
+    top: 0;
+    left: auto;
+    right: auto;
+  }
+  padding-left: 10px;
+  width: 340px;
+
+  @media #{$max-tablet} {
+    padding-left: 6px;
+    width: 429px;
+    letter-spacing: -0.005em;
+    text-align: center;
+  }
+
+  @media #{$max-mobile} {
+    padding-left: 0;
+    width: auto;
+  }
+
+  &:last-of-type {
+    margin-bottom: 56px;
+
+    @media #{$max-tablet} {
+      margin-bottom: 40px;
+    }
+
+    @media #{$max-mobile} {
+      margin-bottom: 53px;
+    }
+  }
+}
+
+.bikes-video__video {
+  margin: {
+    left: auto;
+    right: auto;
+    bottom: -118px;
+  }
+}

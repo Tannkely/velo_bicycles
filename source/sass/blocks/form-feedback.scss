@@ -1,0 +1,65 @@
+.form-feedback {
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+.form-feedback input {
+  padding: 14px 29px 8px;
+  border: 1px solid $grey-4;
+  border-radius: 6px;
+  color: $black-1;
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+
+  @media #{$max-tablet} {
+    padding: 11px 21px;
+  }
+
+  @media #{$max-mobile} {
+    padding: 12px 25px 10px;
+  }
+
+  &::placeholder {
+    color: rgba($grey-1, 0.5);
+  }
+
+  &:hover {
+    border-color: $basic-turquoise;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    border-color: $basic-turquoise;
+    border-width: 3px;
+  }
+}
+
+.form-feedback button {
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: $basic-turquoise;
+  color: $black-1;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 21px;
+  word-break: break-word;
+
+  @media #{$max-mobile} {
+    padding: 13px 15px 16px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: darken($basic-turquoise, 5);
+  }
+
+  &:active {
+    background-color: darken($basic-turquoise, 20);
+  }
+}

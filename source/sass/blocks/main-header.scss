@@ -1,0 +1,62 @@
+$main-header-desktop-height: 825px;
+
+.main-header {
+  min-height: $main-header-desktop-height;
+  background-color: $black-1;
+  background-image: url("../img/bg-desktop.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1440px $main-header-desktop-height;
+  color: $basic-white;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-desktop@2x.webp");
+  }
+
+  @media #{$max-tablet} {
+    min-height: auto;
+    background-color: inherit;
+    background-image: none;
+    color: $black-1;
+  }
+}
+
+.main-header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: {
+    right: auto;
+    left: auto;
+  }
+  width: $desktop-header-width;
+
+  @media #{$max-tablet} {
+    display: block;
+    width: auto;
+  }
+}
+
+.main-header__promo {
+  padding-top: 51px;
+
+  @media #{$max-tablet} {
+    padding-top: 135px;
+  }
+
+  @media #{$max-mobile} {
+    padding-top: 121px;
+  }
+}
+
+.main-header__feedback {
+  padding-top: 6px;
+
+  @media #{$max-tablet} {
+    margin: {
+      left: auto;
+      right: auto;
+    }
+    padding-top: 70px;
+  }
+}

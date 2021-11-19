@@ -1,90 +1,84 @@
 'use strict';
 
-(function () {
+(() => {
+  const mainNavElement = document.querySelector('.main-nav');
+  const mainElement = document.querySelector('.main');
+  const footerElement = document.querySelector('.page-footer');
 
-var main = document.querySelector('#main');
+  if (mainNavElement) {
+    const mainNavLogoElement = mainNavElement.querySelector('.main-nav__logo');
+    const mainNavToggleElement = mainNavElement.querySelector('.main-nav__toggle');
+    const mainNavSiteNavElement = mainNavElement.querySelector('.main-nav__site-nav');
+    const navItemsCollection = mainNavElement.querySelectorAll('.site-nav__item');
 
-if (main) {
-  var nav = document.querySelector('.main-nav__list');
-  var btnToggle = document.querySelector('.main-nav__toggle');
-  var pageHeader = document.querySelector('.page-header__wrap');
+    const elements = {
+      'main-nav': mainNavElement,
+      'main-nav__logo': mainNavLogoElement,
+      'main-nav__toggle': mainNavToggleElement,
+      'main-nav__site-nav': mainNavSiteNavElement,
+    };
 
-  btnToggle.classList.remove('main-nav__toggle--no-js');
-  nav.classList.remove('main-nav__list--no-js');
-  pageHeader.classList.remove('page-header__wrap--no-js');
-
-  btnToggle.addEventListener('click', function () {
-    btnToggle.classList.toggle('main-nav__toggle--active');
-    nav.classList.toggle('main-nav__list--active');
-  });
-
-//Плавный скролл для ссылок
-
-(function () {
-
-  var links = document.querySelectorAll('a[href^="#"]');
-
-  for (let link of links) {
-    link.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      var id = link.getAttribute('href');
-
-      document.querySelector(id).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    });
-  };
-})();
-
-//Валидация поля имени
-
-(function () {
-
-  var inputName = document.querySelector('input[name="name"]');
-
-  var getCorrectName = function () {
-    var valueName = inputName.value;
-    var re = /^[a-zA-Zа-яА-Я]*$/;
-
-    for (var i = 0; i < valueName.length; i++) {
-      if (!re.test(valueName[i])) {
-        inputName.setCustomValidity('Имя должно содержать только буквы');
-      } else {
-        inputName.setCustomValidity('');
+    Object.keys(elements).forEach((element) => {
+      if (elements[element] !== undefined) {
+        elements[element].classList.remove(`${element}--no-js`);
+        elements[element].classList.add(`${element}--closed`);
       }
-    }
-  };
+    })
 
-  inputName.addEventListener('input', function () {
-    getCorrectName();
-  });
-
-})();
-
-//Валидация поля ввода номера
-
-(function () {
-
-  var inputPhone = document.querySelector('input[name="phone"]');
-
-  var getCorrectPhone = function () {
-    var valuePhone = inputPhone.value;
-    var re = /^[0-9]*$/;
-
-    for (var i = 0; i < valuePhone.length; i++) {
-      if (!re.test(valuePhone[i])) {
-        inputPhone.setCustomValidity('Номер телефона должен состоять из цифр');
-      } else {
-        inputPhone.setCustomValidity('');
+    const toggleMenu = () => {
+      Object.keys(elements).forEach((element) => {
+        if (elements[element] !== undefined) {
+          elements[element].classList.toggle(`${element}--opened`);
+          elements[element].classList.toggle(`${element}--closed`);
+        }
+      })
+      if (mainElement) {
+        mainElement.classList.toggle('main--menu-open');
       }
+      if (footerElement) {
+        footerElement.classList.toggle('page-footer--menu-open');
+      }
+    };
+
+    if (mainNavToggleElement) {
+      mainNavToggleElement.addEventListener('click', toggleMenu);
     }
-  };
 
-  inputPhone.addEventListener('input', function () {
-    getCorrectPhone();
-  });
-
+    if (navItemsCollection.length > 0) {
+      navItemsCollection.forEach((item) => {
+        const link = item.querySelector('a');
+        link.addEventListener('click', toggleMenu);
+      })
+    }
+  }
 })();
-};
+
+//validation
+
+(() => {
+  const formElement = document.querySelector('.form-feedback');
+  const Inputmask = window.Inputmask;
+
+  if (formElement) {
+    const telInputElement = formElement.querySelector('#tel');
+    const mask = new Inputmask('9 (999) 999-99-99');
+    if (telInputElement) {
+      mask.mask(telInputElement);
+    }
+  }
+})();
+
+//Validation
+
+(() => {
+  const formElement = document.querySelector('.form-feedback');
+  const Inputmask = window.Inputmask;
+
+  if (formElement) {
+    const telInputElement = formElement.querySelector('#tel');
+    const mask = new Inputmask('9 (999) 999-99-99');
+    if (telInputElement) {
+      mask.mask(telInputElement);
+    }
+  }
 })();

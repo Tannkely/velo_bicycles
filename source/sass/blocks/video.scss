@@ -1,178 +1,58 @@
 .video {
   position: relative;
-
-  text-align: center;
-
-  &::before {
-    position: absolute;
-    content: "";
-
-    left: 0;
-
-    width: 100%;
-    height: 706px;
-
-    background-color: #131314;
-    z-index: -1;
-  }
+  width: max-content;
 }
 
-.video__desc {
-  width: 929px;
-  margin: 0 auto;
-  padding-top: 120px;
-  padding-bottom: 56px;
-}
-
-.video__title {
-  margin-bottom: 20px;
-  padding-right: 10px;
-
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 30px;
-  letter-spacing: -0.005em;
-
-  color: $white;
-}
-
-.video__text {
-  max-width: 340px;
-  margin: 0 auto;
-
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: -0.005em;
-
-  color: $white;
-
-  opacity: 0.7;
-}
-
-.video__wrap {
-  position: relative;
-
-  width: 929px;
-  height: 522px;
-  margin: 0 auto;
-}
-
-.video__content {
-  display: block;
-  width: 100%;
-  height: 100%;
-
-  background-image: url("../img/backdrop-video-desktop@1x.webp");
-  background-repeat: no-repeat;
-  background-size: 929px 522px;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/backdrop-video-desktop@2x.webp");
-  }
-}
-
-.video__btn {
-  position: absolute;
-
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 65px;
-  height: 65px;
-
-  background-image: url("../img/btn-play-small.svg");
-  background-color: transparent;
-
-  border: none;
+.video__button {
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
 
-  &:hover {
-    opacity: 0.7;
+  &:hover,
+  &:focus {
+    .video__button-shape {
+      fill: darken($basic-turquoise, 5);
+    }
+
+    .video__button-inner {
+      fill: $basic-white;
+    }
   }
 
   &:active {
-    transform: translate(-50%, -50%) scale(0.7);
+    .video__button-shape {
+      fill: darken($basic-turquoise, 20);
+    }
   }
 }
 
-@media (max-width: $tablet-width) {
-  .video::before {
-    height: 413px;
-  }
-
-  .video__desc {
-    width: 503px;
-    padding-top: 70px;
-    padding-bottom: 40px;
-  }
-
-  .video__title {
-    padding-right: 0;
-
-    font-size: 24px;
-  }
-
-  .video__text {
-    max-width: 429px;
-  }
-
-  .video__wrap {
-    width: 503px;
-    height: 282px;
-  }
-
-  .video__content {
-    background-image: url("../img/backdrop-video-tablet@1x.webp");
-    background-size: 503px 282px;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/backdrop-video-tablet@2x.webp");
-    }
-  }
-
-  .video__btn {
+.video__button svg {
+  @media #{$max-tablet} {
     width: 90px;
     height: 90px;
+  }
 
-    background-image: url("../img/btn-play.svg");
+  @media #{$max-mobile} {
+    width: 65px;
+    height: 65px;
   }
 }
 
-@media (max-width: $mobile-width) {
-  .video::before {
-    height: 384px;
+.video img {
+  display: block;
+
+  @media #{$max-tablet} {
+    width: 503px;
+    height: 282px;
+    object-fit: cover;
   }
 
-  .video__desc {
-    width: 291px;
-    padding-top: 84px;
-    padding-bottom: 53px;
-  }
-
-  .video__title {
-    padding-right: 11px;
-  }
-
-  .video__wrap {
-    width: 290px;
+  @media #{$max-mobile} {
+    width: 288px;
     height: 162px;
-  }
-
-  .video__content {
-    background-image: url("../img/backdrop-video-mobile@1x.webp");
-    background-size: 288px 162px;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/backdrop-video-mobile@2x.webp");
-    }
-  }
-
-  .video__btn {
-    width: 65px;
-    height: 65px;
-
-    background-image: url("../img/btn-play-small.svg");
   }
 }
