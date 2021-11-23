@@ -31,12 +31,12 @@
 }
 
 .video__button svg {
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     width: 90px;
     height: 90px;
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     width: 65px;
     height: 65px;
   }
@@ -45,13 +45,13 @@
 .video img {
   display: block;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     width: 503px;
     height: 282px;
     object-fit: cover;
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     width: 288px;
     height: 162px;
   }

@@ -9,7 +9,7 @@
   font-size: 16px;
   line-height: 22px;
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     grid-template-columns: max-content;
     grid-row-gap: 23px;
   }
@@ -32,13 +32,13 @@
 }
 
 .contacts__link--mail a {
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     padding-left: 8px;
   }
 }
 
 .contacts__link--phone a {
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     padding-right: 12px;
   }
 }

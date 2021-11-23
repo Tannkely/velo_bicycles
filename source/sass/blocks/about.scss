@@ -1,7 +1,7 @@
 .about h2 {
   margin-bottom: 50px;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     margin-bottom: 30px;
   }
 }
@@ -21,7 +21,7 @@
   text-align: center;
   letter-spacing: -0.005em;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     padding: {
       left: 11.5%;
       right: 11.5%;
@@ -29,7 +29,7 @@
     letter-spacing: -0.01px;
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     display: block;
     padding: {
       left: 0;
@@ -51,11 +51,11 @@
   }
   counter-increment: myCounter;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     padding-bottom: 40px;
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     margin-bottom: 35px;
     padding: {
       top: 46px;
@@ -81,7 +81,7 @@
   }
 
   &:last-child {
-    @media #{$max-mobile} {
+    @media (max-width: $mobile-width-max) {
       margin-bottom: 0;
     }
   }

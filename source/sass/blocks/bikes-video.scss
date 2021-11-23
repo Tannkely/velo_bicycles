@@ -4,17 +4,17 @@
   background-color: $black-3;
   color: rgba($basic-white, 0.7);
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     min-height: 413px;
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     min-height: 384px;
   }
 }
 
 .bikes-video__container {
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     @include container-mobile;
   }
 }
@@ -27,12 +27,12 @@
   padding-right: 10px;
   color: $basic-white;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     margin-bottom: 15px;
     padding-right: 0;
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     padding-right: 8px;
   }
 }
@@ -46,14 +46,14 @@
   padding-left: 10px;
   width: 340px;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     padding-left: 6px;
     width: 429px;
     letter-spacing: -0.005em;
     text-align: center;
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     padding-left: 0;
     width: auto;
   }
@@ -61,11 +61,11 @@
   &:last-of-type {
     margin-bottom: 56px;
 
-    @media #{$max-tablet} {
+    @media (max-width: $tablet-width-max) {
       margin-bottom: 40px;
     }
 
-    @media #{$max-mobile} {
+    @media (max-width: $mobile-width-max) {
       margin-bottom: 53px;
     }
   }

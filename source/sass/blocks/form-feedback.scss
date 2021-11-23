@@ -13,11 +13,11 @@
   font-size: 15px;
   line-height: 24px;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     padding: 11px 21px;
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     padding: 12px 25px 10px;
   }
 
@@ -50,7 +50,7 @@
   line-height: 21px;
   word-break: break-word;
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     padding: 13px 15px 16px;
   }
 

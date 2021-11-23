@@ -1,5 +1,5 @@
 .main--menu-open {
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     display: none;
   }
 }
@@ -13,7 +13,7 @@
   letter-spacing: -0.005em;
   text-align: center;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     font-size: 24px;
     line-height: 41px;
   }
@@ -26,7 +26,7 @@
     bottom: 20px;
   }
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     margin-bottom: 30px;
     padding: {
       top: 0;
@@ -39,7 +39,7 @@
   padding-top: 50px;
   margin-bottom: 134px;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     margin-bottom: 0;
     padding: {
       top: 40px;
@@ -47,7 +47,7 @@
     }
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     margin-bottom: 0;
     padding-bottom: 71px;
   }
@@ -59,14 +59,14 @@
     bottom: 149px;
   }
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     padding: {
       top: 50px;
       bottom: 70px;
     }
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     padding: {
       bottom: 54px;
     }
@@ -80,7 +80,7 @@
     bottom: 20px;
   }
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     margin-bottom: 109px;
     padding: {
       top: 64px;
@@ -88,7 +88,7 @@
     }
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     margin-bottom: 101px;
     padding: {
       top: 78px;
@@ -100,7 +100,7 @@
 .main__address {
   padding-top: 50px;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     padding: {
       top: 40px;
       left: 35px;
@@ -108,7 +108,7 @@
     }
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     padding: {
       top: 19px;
       left: 0;

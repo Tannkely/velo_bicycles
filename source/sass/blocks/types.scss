@@ -5,7 +5,7 @@
 .types h2 {
   margin-bottom: 17px;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     margin-bottom: 30px;
   }
 }
@@ -24,7 +24,7 @@
   width: 100%;
   list-style: none;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     display: flex;
     flex-wrap: wrap;
     grid-gap: unset;
@@ -37,7 +37,7 @@
     width: auto;
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     display: block;
     padding: {
       left: 25px;
@@ -49,7 +49,7 @@
 .types li {
   width: fit-content;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     margin-bottom: 50px;
     padding: {
       left: 25px;
@@ -57,7 +57,7 @@
     }
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     margin: {
       right: auto;
       left: auto;
@@ -70,7 +70,7 @@
   }
 
   &:last-child {
-    @media #{$max-tablet} {
+    @media (max-width: $tablet-width-max) {
       margin: {
         bottom: 0;
       }

@@ -25,7 +25,7 @@
     top: 10px;
   }
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     padding: {
       top: 0;
       // left: 37px;
@@ -38,7 +38,7 @@
     top: 39px;
   }
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     padding: {
       top: 0;
       // left: 0;
@@ -48,7 +48,7 @@
 }
 
 .type--kids {
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     padding: {
       // top: 20px;
       // right: 25px;
@@ -74,7 +74,7 @@
     width: 180px;
     height: 180px;
 
-    @media #{$max-tablet} {
+    @media (max-width: $tablet-width-max) {
       top: unset;
       bottom: -28px;
       left: -37px;
@@ -84,7 +84,7 @@
       height: 127px;
     }
 
-    @media #{$max-mobile} {
+    @media (max-width: $mobile-width-max) {
       left: -26px;
     }
   }
@@ -100,7 +100,7 @@
     width: 47px;
     height: 47px;
 
-    @media #{$max-tablet} {
+    @media (max-width: $tablet-width-max) {
       display: none;
     }
   }
@@ -128,7 +128,7 @@
     width: 95px;
     height: 95px;
 
-    @media #{$max-tablet} {
+    @media (max-width: $tablet-width-max) {
       top: -20px;
       right: -25px;
       border-width: 13px;
@@ -136,7 +136,7 @@
       height: 68px;
     }
 
-    @media #{$max-mobile} {
+    @media (max-width: $mobile-width-max) {
       right: -14px;
     }
   }
@@ -148,7 +148,7 @@
   display: block;
   border-radius: 10px;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     width: 270px;
     height: 300px;
     object-fit: cover;
@@ -157,13 +157,13 @@
 }
 
 .type--city img {
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     object-position: 50% 60%;
   }
 }
 
 .type--mountain img {
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     object-position: 50% 40%;
   }
 }

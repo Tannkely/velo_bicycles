@@ -11,7 +11,7 @@
 .page__footer {
   padding-bottom: 98px;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     padding-bottom: 53px;
   }
 }

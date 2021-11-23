@@ -1,5 +1,5 @@
 .page-footer--menu-open {
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     display: none;
   }
 }
@@ -10,14 +10,14 @@
     right: 16px;
   }
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     padding: {
       top: 21px;
       right: 11px;
     }
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     padding: {
       top: 29px;
       right: 0;

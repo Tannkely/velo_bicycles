@@ -1,26 +1,12 @@
 $mobile-width: 320px;
+$mobile-width-max: 767px;
 $tablet-width: 768px;
+$tablet-width-max: 1023px;
 $desktop-width: 1024px;
-
-$max-mobile: (
-  max-width: $tablet-width - 1px,
-);
-
-$min-tablet: (
-  min-width: $tablet-width,
-);
-
-$max-tablet: (
-  max-width: $desktop-width - 1px,
-);
-
-$min-desktop: (
-  min-width: $desktop-width,
-);
 
 $desktop-header-width: 880px;
 
-$basic-white: hsl(0, 0, 100%);
+$basic-white: hsl(0, 0%, 100%);
 $basic-turquoise: hsl(174, 91%, 44%);
 
 $black-1: hsl(0, 100%, 0%);

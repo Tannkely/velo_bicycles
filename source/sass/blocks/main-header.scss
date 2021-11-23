@@ -13,7 +13,7 @@ $main-header-desktop-height: 825px;
     background-image: url("../img/bg-desktop@2x.webp");
   }
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     min-height: auto;
     background-color: inherit;
     background-image: none;
@@ -31,7 +31,7 @@ $main-header-desktop-height: 825px;
   }
   width: $desktop-header-width;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     display: block;
     width: auto;
   }
@@ -40,11 +40,11 @@ $main-header-desktop-height: 825px;
 .main-header__promo {
   padding-top: 51px;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     padding-top: 135px;
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     padding-top: 121px;
   }
 }
@@ -52,7 +52,7 @@ $main-header-desktop-height: 825px;
 .main-header__feedback {
   padding-top: 6px;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     margin: {
       left: auto;
       right: auto;

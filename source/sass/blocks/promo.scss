@@ -1,7 +1,7 @@
 .promo {
   width: 393px;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     width: auto;
     min-height: 340px;
     background-color: $black-1;
@@ -16,7 +16,7 @@
     }
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     min-height: 390px;
     background-image: url("../img/bg-mobile.webp");
 
@@ -35,7 +35,7 @@
   letter-spacing: -0.005em;
   text-align: left;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     margin-bottom: 19px;
     font-size: 30px;
     line-height: 42px;
@@ -50,7 +50,7 @@
   line-height: 32px;
   letter-spacing: -0.005em;
 
-  @media #{$max-tablet} {
+  @media (max-width: $tablet-width-max) {
     margin: {
       left: auto;
       right: auto;
@@ -60,7 +60,7 @@
     text-align: center;
   }
 
-  @media #{$max-mobile} {
+  @media (max-width: $mobile-width-max) {
     @include container-mobile;
     width: auto;
   }
