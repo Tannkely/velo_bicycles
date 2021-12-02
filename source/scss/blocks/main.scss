@@ -10,7 +10,7 @@
   font-weight: 600;
   font-size: 30px;
   line-height: 30px;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   text-align: center;
 
   @media (max-width: $tablet-width-max) {
@@ -74,10 +74,10 @@
 }
 
 .main__bikes-video {
-  margin-bottom: 200px;
+  margin-bottom: 218px;
   padding: {
     top: 122px;
-    bottom: 20px;
+    // bottom: 20px;
   }
 
   @media (max-width: $tablet-width-max) {

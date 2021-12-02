@@ -32,7 +32,7 @@
   font-weight: bold;
   font-size: 46px;
   line-height: 64px;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   text-align: left;
 
   @media (max-width: $tablet-width-max) {
@@ -48,7 +48,7 @@
   color: rgba($basic-white, 0.8);
   font-size: 20px;
   line-height: 32px;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
 
   @media (max-width: $tablet-width-max) {
     margin: {

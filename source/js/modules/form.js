@@ -1,13 +1,11 @@
-'use strict';
-
 // Модуль валидации поля формы
 (function () {
   const formElement = document.querySelector('.form-feedback');
-  if (!formElement) return;
+  if (!formElement) { return; }
 
   const telInputElement = formElement.querySelector('#tel');
-  if (!telInputElement) return;
+  if (!telInputElement) { return; }
 
-  const mask = new Inputmask('9 (999) 999-99-99');
+  const mask = new window.Inputmask('9 (999) 999-99-99');
   mask.mask(telInputElement);
 })();

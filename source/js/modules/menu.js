@@ -1,9 +1,7 @@
-'use strict';
-
 // Модуль главного меню (бургер-меню)
 (function () {
   const mainNavElement = document.querySelector('.main-nav');
-  if (!mainNavElement) return;
+  if (!mainNavElement) { return; }
 
   const mainElement = document.querySelector('.main');
   const mainNavLogoElement = mainNavElement.querySelector('.main-nav__logo');
@@ -47,7 +45,7 @@
 
   // Функция открытия/закрытия главного меню
   function toggleMenu() {
-    Object.keys(elements).forEach(element => {
+    Object.keys(elements).forEach((element) => {
       if (elements[element] !== undefined) {
         elements[element].classList.toggle(`${element}--opened`);
         elements[element].classList.toggle(`${element}--closed`);

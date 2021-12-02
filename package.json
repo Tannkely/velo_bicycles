@@ -1,44 +1,51 @@
 {
-  "name": "Liga-A-start-template",
+  "name": "bicycles",
   "version": "1.0.0",
   "description": "Стартовый шаблон сборки Лиги А",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "1.x",
-    "autoprefixer": "9.5.x",
-    "browser-sync": "2.26.x",
-    "eslint": "^8.2.0",
-    "eslint-config-htmlacademy": "^0.4.2",
-    "gulp": "4.0.x",
+    "@htmlacademy/editorconfig-cli": "1.0.0",
+    "autoprefixer": "10.4.0",
+    "browser-sync": "2.27.7",
+    "del": "6.0.0",
+    "eslint-config-htmlacademy": "^5.0.0",
+    "gulp": "4.0.2",
     "gulp-concat": "^2.6.1",
-    "gulp-csso": "^3.0.1",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-plumber": "1.2.x",
-    "gulp-postcss": "8.0.x",
-    "gulp-posthtml": "^3.0.4",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^5.0.x",
-    "gulp-sourcemaps": "2.6.x",
-    "gulp-svgstore": "^7.0.1",
-    "gulp-webp": "^4.0.1",
-    "pixel-glass": "^1.0.13",
-    "posthtml-include": "^1.2.0",
-    "stylelint": "^14.1.0",
-    "stylelint-config-htmlacademy": "^0.1.11",
-    "stylelint-config-standard-scss": "^3.0.0"
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-dart-scss": "^1.1.0",
+    "gulp-htmlmin": "5.0.1",
+    "gulp-less": "5.0.0",
+    "gulp-libsquoosh": "^1.0.12",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.1",
+    "gulp-posthtml": "^3.0.5",
+    "gulp-rename": "2.0.0",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-svgstore": "8.0.0",
+    "gulp-terser": "2.1.0",
+    "gulp-webp": "4.0.1",
+    "node-sass": "^6.0.1",
+    "postcss": "8.3.11",
+    "postcss-csso": "5.0.1",
+    "postcss-scss": "^4.0.2",
+    "posthtml-include": "^1.7.2",
+    "stylelint": "14.1.0",
+    "stylelint-config-htmlacademy": "0.1.11",
+    "stylelint-order-htmlacademy": "^2.0.3"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "test": "npm run editorconfig && npm run stylelint && eslint source/js/",
+    "stylelint": "stylelint --fix \"source/scss/**/*.scss\" --custom-syntax postcss-scss",
+    "test": "npm run editorconfig && npm run stylelint & eslint source/js/modules",
     "build": "gulp build",
-    "start": "gulp start",
-    "webp": "gulp webp",
-    "sprite": "gulp sprite"
+    "start": "gulp"
   },
   "browserslist": [
     "last 2 versions",
-    "IE 11",
-    "Firefox ESR"
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all",
+    "not < 0.25%"
   ],
   "editorconfig-cli": [
     "*.json",
@@ -46,13 +53,7 @@
     "source/*.html",
     "source/js/**/*.js",
     "source/img/**/*.svg",
-    "source/sass/**/*.{sass,scss}"
+    "source/scss/**/*.scss"
   ],
-  "dependencies": {
-    "del": "^4.1.1",
-    "postcss": "^8.4.0",
-    "postcss-sass": "^0.5.0",
-    "postcss-scss": "^4.0.2",
-    "sass": "^1.43.4"
-  }
+  "type": "module"
 }
